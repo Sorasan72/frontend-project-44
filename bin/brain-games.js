@@ -2,10 +2,10 @@
 
 
 import { userName } from '../src/cli.js';
-import { evenGame } from './brain-even.js';
+// import { evenGame } from './brain-even.js';
 
 console.log('Welcome to the Brain Games!');
-
-const name = userName();
-evenGame(name);
+userName();
+// const name = 
+// evenGame(name);
 
