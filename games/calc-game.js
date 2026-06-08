@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { getRandomNumber } from '../src/index.js';
+
 export const calcGameDescription = 'What is the result of the expression?';
 
 const calculate = (num1, num2, operator) => {
@@ -16,10 +18,10 @@ const calculate = (num1, num2, operator) => {
 };
 
 export const calcGameLogic = () => {
-    const num1 = Math.floor(Math.random() * 20) + 1;
-    const num2 = Math.floor(Math.random() * 20) + 1;
+    const num1 = getRandomNumber(1, 20);
+    const num2 = getRandomNumber(1, 20);
     const operators = ['+', '-', '*'];
-    const operator = operators[Math.floor(Math.random() * operators.length)];
+    const operator = operators[getRandomNumber(0, operators.length - 1)];
     const question = `${num1} ${operator} ${num2}`;
     const correctAnswer = calculate(num1, num2, operator).toString();
     

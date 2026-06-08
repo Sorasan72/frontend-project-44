@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { getRandomNumber } from '../src/index.js';
+
 const findGCD = (a, b) => {
   let num1 = Math.abs(a);
   let num2 = Math.abs(b);
@@ -11,10 +13,6 @@ const findGCD = (a, b) => {
   }
   
   return num1;
-};
-
-const getRandomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 export const gcdGameDescription = 'Find the greatest common divisor of given numbers.';

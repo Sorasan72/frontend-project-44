@@ -6,6 +6,14 @@ import { gcdGameLogic, gcdGameDescription } from '../games/gcd-game.js';
 import { progressionGameLogic, progressionGameDescription } from '../games/progression-game.js';
 import { primeGameLogic, primeGameDescription } from '../games/prime-game.js';
 
+export const getRandomNumber = (min, max) => {
+  const range = max - min + 1;
+  const randomBuffer = new Uint32Array(1);
+  crypto.getRandomValues(randomBuffer);
+  const randomNumber = randomBuffer[0] / (0xffffffff + 1);
+  return Math.floor(randomNumber * range) + min;
+};
+
 export function runGame(gameName) {
     let gameLogic;
     let gameDescription;

@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
+ import { getRandomNumber } from '../src/index.js';
+
 export const evenGameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const evenGameLogic = () => {
-    const number = Math.floor(Math.random() * 100) + 1;
+    const number = getRandomNumber(1, 100);
     const question = number.toString();
     const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
     

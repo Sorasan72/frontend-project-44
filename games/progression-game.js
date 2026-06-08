@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
+import { getRandomNumber } from '../src/index.js';
+
 const generateProgression = (start, step, length) => {
   const progression = [];
   for (let i = 0; i < length; i++) {
     progression.push(start + i * step);
   }
   return progression;
-};
-
-const getRandomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 export const progressionGameDescription = 'What number is missing in the progression?';
