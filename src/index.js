@@ -14,8 +14,7 @@ export const getRandomNumber = (min, max) => {
   return Math.floor(randomNumber * range) + min;
 };
 
-export function runGame(gameName) {
-    let gameLogic;
+export function runGame(gameName, gameLogic) {
     let gameDescription;
     
     switch (gameName) {
