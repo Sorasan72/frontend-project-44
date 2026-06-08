@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { getRandomNumber } from '../src/index.js';
+
 const isPrime = (num) => {
     if (num < 2) return false;
     if (num === 2) return true;
@@ -10,10 +12,6 @@ const isPrime = (num) => {
         if (num % i === 0) return false;
     }
     return true;
-};
-
-const getRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 export const primeGameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
